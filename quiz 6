@@ -1,0 +1,32 @@
+# Quiz 6
+
+# Anthony Maldonado-Perez
+# amaldo36@gmail.com
+
+# I hereby attest that I have adhered to the rules for quizzes and projects as well as UIC's
+# Academic Integrity standards. Signed: Anthony Maldonado-Perez
+
+# Question 1
+
+import sys
+
+n = 1
+if len(sys.argv) == 2:
+    n = int(sys.argv[1])
+for i in range(n):
+    line_str = ' '
+    with open("lines.txt", "w") as f:
+        f.write(line_str)
+
+# Question 2
+
+data_file = open("data.txt", "r")
+for data in data_file.readlines():
+    if data >= 1:
+        total = sum(int(arg) for arg in sys.argv[1:] if arg.isdigit())
+        average = total/n
+        print(average)
+    if data <= -1:
+        print(average)
+data_file.close()
+
